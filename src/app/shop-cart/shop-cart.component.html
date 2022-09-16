@@ -1,0 +1,35 @@
+<div class="cart-entries-container">
+  <div>
+    <button class="clear-button action-button" (click)="clearEntries()">REMOVE ALL</button>
+  </div>
+
+  {{totalData|json}}
+
+
+
+  {{(totalData|json)}}
+
+  <div *ngFor="let entry of  (totalData)" class="cart-entry">
+    <div>
+      <img src="{{ entry.image }}">
+    </div>
+    <div class="entry-details">
+      <div class="product-name">
+        {{ entry.name }}
+      </div>
+      <div class="count">
+        {{ entry.price }}
+      </div>
+      <div class="detail-button-row">
+
+        <div>
+          <button class="action-button detail-button">MORE</button>
+        </div>
+        <div>
+          <button class="action-button detail-button">LESS</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
